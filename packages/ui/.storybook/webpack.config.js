@@ -14,11 +14,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.jsx?$/,
-      //   exclude: /node_modules/,
-      //   use: 'babel-loader',
-      // },
       {
         test: /\.svg$/,
         exclude: [paths.publicFiles],
@@ -37,14 +32,18 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              localIdentName: '[local]-[hash:base64:5]',
+              modules: {
+                mode: 'local',
+                localIdentName: '[local]-[hash:base64:5]',
+              },
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [paths.scss],
+              sassOptions: {
+                includePaths: [paths.scss],
+              },
             },
           },
         ],

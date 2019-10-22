@@ -13,7 +13,7 @@ module.exports = {
   mode: 'production',
   entry: {
     main: paths.entryPoint,
-    core: ['@babel/polyfill', 'react', 'react-dom', 'react-router-dom'],
+    core: ['react', 'react-dom', 'react-router-dom'],
   },
   output: {
     path: paths.outputPath,
