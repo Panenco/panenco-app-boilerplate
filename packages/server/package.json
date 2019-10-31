@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "static server for RMB",
   "main": "index.js",
-  "author": "Kostiantyn Levytskyi <le.konstantos@gmail.com>",
+  "author": "Panenco <info@panenco.com>",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {

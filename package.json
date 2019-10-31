@@ -2,7 +2,7 @@
   "name": "react-monorepo-boilerplate",
   "version": "2.0.0",
   "description": "Single page application",
-  "author": "Kostiantyn Levytskyi <le.konstantos@gmail.com>",
+  "author": "Panenco <info@panenco.com>",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
