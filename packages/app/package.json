@@ -55,7 +55,6 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-import-resolver-webpack": "^0.11.0",
-    "eslint-plugin-compat": "^2.7.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
