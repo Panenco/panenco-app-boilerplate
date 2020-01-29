@@ -1,6 +1,17 @@
-import { addDecorator, configure } from '@storybook/react';
+import { addDecorator, configure, addParameters } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
+import { themes } from '@storybook/theming';
 
+addParameters({
+  options: {
+    showPanel: true,
+    panelPosition: 'right',
+    theme: themes.light,
+  },
+  readme: {
+    codeTheme: 'github',
+  },
+});
 
 // Option defaults:
 addDecorator(
