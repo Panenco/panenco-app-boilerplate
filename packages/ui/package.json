@@ -10,7 +10,7 @@
     "start": "start-storybook -p 9001 -c .storybook",
     "build": "cross-env NODE_ENV=production BABEL_ENV=production rollup --config rollup.config.js",
     "build:storybook": "build-storybook -c .storybook -o storybook-dist",
-    "watch": "npm run clean && rollup --config rollup.config.js",
+    "watch": "npm run clean && rollup --config rollup.config.js --watch",
     "clean": "rimraf lib",
     "eslint": "eslint config src stories  --ext .js --ext .jsx",
     "prettier": "prettier '{config,src,stories}/**/*.{js,jsx}' --write",

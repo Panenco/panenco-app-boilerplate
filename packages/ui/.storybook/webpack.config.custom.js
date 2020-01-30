@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const path = require("path");
+const path = require('path');
 const paths = require('../config/paths');
 
 module.exports = {
@@ -14,6 +14,18 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(mjs|jsx?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              rootMode: 'upward',
+            },
+          },
+        ],
+      },
       {
         test: /\.svg$/,
         exclude: [paths.publicFiles],

@@ -7,7 +7,7 @@ const paths = require('./paths');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: paths.entryPoint,
+  entry: ['react-hot-loader/patch', paths.entryPoint],
   output: {
     path: paths.outputPath,
     publicPath: '/',
@@ -17,6 +17,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     modules: ['node_modules', paths.nodeModules, paths.src],
     alias: {
+      'react-dom': '@hot-loader/react-dom',
       config: paths.appConfig,
       static: paths.publicFiles,
       public: paths.publicFiles,
