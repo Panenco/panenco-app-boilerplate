@@ -1,6 +1,15 @@
-import { addDecorator, configure } from '@storybook/react';
+import { addDecorator, configure, addParameters } from '@storybook/react';
 import { withOptions } from '@storybook/addon-options';
+import { themes } from '@storybook/theming';
 
+addParameters({
+  options: {
+    theme: themes.normal,
+  },
+  readme: {
+    codeTheme: 'github',
+  },
+});
 
 // Option defaults:
 addDecorator(
@@ -9,7 +18,7 @@ addDecorator(
      * name to display in the top left corner
      * @type {String}
      */
-    name: 'Storybook',
+    name: 'Panenco Storybook',
     /**
      * URL for name in top left corner to link to
      * @type {String}
@@ -78,9 +87,8 @@ addDecorator(
      * @type {Boolean}
      */
     enableShortcuts: false, // true by default
-  })
+  }),
 );
-
 
 function loadStories() {
   require('../stories/index.jsx');

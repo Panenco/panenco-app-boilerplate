@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="26.652764" cy="26.652764" r="26.652764"></circle>
+    </defs>
+    <g id="app_icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.323922, 3.323922)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="path-1" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <circle id="Oval" stroke="#1C1C1D" stroke-width="2.08726465" mask="url(#mask-2)" cx="26.652764" cy="26.652764" r="25.6091316"></circle>
+            <polygon id="Fill-16" fill="#F16522" fill-rule="nonzero" mask="url(#mask-2)" points="37.2674859 21.2651236 19.7844145 10.9179997 19.7844145 31.6122475"></polygon>
+            <polygon id="Fill-18" fill="#231F20" fill-rule="nonzero" mask="url(#mask-2)" points="30.4881741 29.359429 19.7110636 35.826069 30.4881741 42.2920124"></polygon>
+        </g>
+    </g>
+</svg>
