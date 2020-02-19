@@ -1,5 +1,5 @@
 {
-  "name": "@rmb/server",
+  "name": "@pma/server",
   "version": "1.0.0",
   "description": "static server for RMB",
   "main": "index.js",
@@ -10,8 +10,8 @@
     "start": "NODE_ENV=production node index.js"
   },
   "dependencies": {
-    "@rmb/app": "^1.0.0",
-    "@rmb/ui": "^1.0.0",
+    "@pma/app": "^1.0.0",
+    "@pma/ui": "^1.0.0",
     "compression": "^1.7.4",
     "express": "^4.17.1"
   }

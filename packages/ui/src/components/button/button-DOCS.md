@@ -1,8 +1,9 @@
 # Button
 
 Button component
+
 ```js
-import { PrimaryButton, SecondaryButton } from '@rmb/ui';
+import { PrimaryButton, SecondaryButton } from '@pma/ui';
 ```
 
 <!-- STORY -->

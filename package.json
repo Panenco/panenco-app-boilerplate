@@ -1,6 +1,6 @@
 {
-  "name": "react-monorepo-boilerplate",
-  "version": "2.0.0",
+  "name": "panenco-monorepo-app",
+  "version": "2.0.1",
   "description": "Single page application",
   "author": "Panenco <info@panenco.com>",
   "license": "UNLICENSED",
@@ -9,7 +9,7 @@
     "lerna": "lerna",
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "eslint": "lerna run eslint",
+    "lint": "lerna run lint:js && lerna run lint:css",
     "start": "yarn server start",
     "bootstrap": "yarn lerna bootstrap",
     "ui": "cd packages/ui && yarn",
@@ -36,10 +36,24 @@
     "@babel/preset-react": "^7.7.4",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.1.0",
     "lerna": "^3.19.0",
-    "lint-staged": "^9.5.0"
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1"
   },
   "workspaces": [
     "packages/*"

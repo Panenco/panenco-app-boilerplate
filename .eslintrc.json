@@ -1,25 +1,33 @@
 {
+  "root": true,
   "parser": "babel-eslint",
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
-  ],
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
   },
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier", "prettier/react"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "jsx-a11y/anchor-is-valid": ["error", {
-      "components": [ "Link" ],
-      "specialLink": [ "to" ]
-    }],
-    "import/prefer-default-export": 0
-  },
-  "settings": {
-    "polyfills": ["promises"]
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "react/jsx-props-no-spreading": 0
   }
 }

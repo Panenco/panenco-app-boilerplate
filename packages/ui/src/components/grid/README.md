@@ -3,7 +3,7 @@
 ### Usage
 
 ```js
-import { Row, Col } from '@rmb/ui';
+import { Row, Col } from '@pma/ui';
 
 render() {
   return (
@@ -15,12 +15,13 @@ render() {
   );
 }
 ```
+
 <!-- STORY -->
 
 ### Row Properties
 
-* `className` - override column styles
-* `children` - column content
+- `className` - override column styles
+- `children` - column content
 
 | propName  | propType | defaultValue | isRequired |
 | --------- | -------- | ------------ | ---------- |
@@ -29,11 +30,11 @@ render() {
 
 ### Column Properties
 
-* `s` - size of columns
-* `m` - size of columns
-* `l` - size of columns
-* `className` - override column styles
-* `children` - column content
+- `s` - size of columns
+- `m` - size of columns
+- `l` - size of columns
+- `className` - override column styles
+- `children` - column content
 
 | propName  | propType | defaultValue | isRequired |
 | --------- | -------- | ------------ | ---------- |

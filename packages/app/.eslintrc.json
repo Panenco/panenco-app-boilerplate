@@ -1,9 +1,0 @@
-{
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "config/webpack.config.production.js"
-      }
-    }
-  }
-}

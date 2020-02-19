@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View } from '@rmb/ui';
+import { View } from '@pma/ui';
 
 import s from './styles.scss';
 

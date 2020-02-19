@@ -1,28 +1,27 @@
-# React-monorepo-boilerplate
+# Panenco-monorepo-app
 
-React-monorepo-boilerplate frontend application constists of couple packages in a single monorepo.
+Panenco-monorepo-app is a frontend application that constists of couple packages in a single monorepo.
 
-`@rmb/ui`, `@rmb/data`, `@rmb/app`
+`@pma/ui`, `@pma/server`, `@pma/app`
 
 To run npm scripts of some package, you can use:
 
 - `yarn ui ...`
-- `yarn data ...`
+- `yarn server ...`
 - `yarn app ...`
+
+Basically that means that `yarn packageName ...` is equivalent of `cd packages/packageName && npm run ...`. When you add another package to your `packages` directory, don't forget to add new 'shortcut'.
 
 ## Installing all dependencies in all packages
 
 ```
-yarn && yarn lerna bootstrap
+yarn
 ```
 
 ## Adding new dependencies to packages
 
-- `yarn lerna add module-1 --scope=module-2` Install module-1 to module-2
-- `yarn lerna add module-1 --scope=module-2 --dev` Install module-1 to module-2 in devDependencies
-- `yarn lerna add module-1` Install module-1 in all modules except module-1
-- `yarn lerna a add babel-core` Install babel-core in all modules
+`cd packages/{package-you-need-to-add-module-to} && yarn add {module-you-want-to-add}`
 
 ## Removing dependencies from packages
 
-`yarn lerna exec --scope module-2 yarn remove module-1` Remove module-1 from module-2
+`cd packages/{package-you-need-to-remove-module-from} && yarn remove {module-you-want-to-remove}`

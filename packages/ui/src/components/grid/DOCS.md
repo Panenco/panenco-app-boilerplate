@@ -3,7 +3,7 @@
 Grid component.
 
 ```js
-import { Row, Col } from '@rmb/ui';
+import { Row, Col } from '@pma/ui';
 ```
 
 <!-- STORY -->

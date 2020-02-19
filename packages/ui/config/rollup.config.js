@@ -3,16 +3,14 @@ import path from 'path';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-// import alias from 'rollup-plugin-alias';
 import replace from 'rollup-plugin-replace';
 import json from 'rollup-plugin-json';
 
-// import sass from 'node-sass';
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
-import packageJson from './package.json';
+import packageJson from '../package.json';
 
-const paths = require('./config/paths');
+const paths = require('./paths');
 
 const external = Object.keys(packageJson.peerDependencies);
 
@@ -23,9 +21,6 @@ export default {
     format: 'esm',
   },
   plugins: [
-    // alias({
-    //   config: paths.appConfig,
-    // }),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),

@@ -1,5 +1,5 @@
 {
-  "name": "@rmb/app",
+  "name": "@pma/app",
   "version": "1.0.0",
   "author": "Panenco <info@panenco.com>",
   "license": "UNLICENSED",
@@ -15,14 +15,14 @@
     "build:production": "cross-env BABEL_ENV=production PROJECT_ENV=production npm run build",
     "clean": "rimraf dist",
     "analyzer": "cross-env NODE_ENV=production BABEL_ENV=production PROJECT_ENV=production webpack --config config/webpack.config.production.js --analyze",
-    "eslint": "eslint config src --ext .js --ext .jsx",
+    "lint:js": "eslint config src --ext .js --ext .jsx",
+    "lint:css": "stylelint 'src/**/*.scss'",
     "prettier": "prettier '{config,src}/**/*.{js,jsx}' --write",
-    "stylelint": "stylelint 'src/**/*.scss'",
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix"
+      "npm run lint:js --fix --"
     ],
     "*.scss": [
       "stylelint --fix"
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@loadable/component": "^5.11.0",
-    "@rmb/ui": "^1.0.0",
+    "@pma/ui": "^1.0.0",
     "classnames": "^2.2.6",
     "core-js": "^3.6.0",
     "normalize.css": "^8.0.1",
@@ -42,22 +42,11 @@
     "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
     "@hot-loader/react-dom": "^16.11.0",
     "autoprefixer": "^9.7.3",
-    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.5",
     "cross-env": "^6.0.3",
     "css-loader": "^3.4.0",
-    "eslint": "^5.14.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-import-resolver-webpack": "^0.11.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
     "favicons-webpack-plugin": "^3.0.1",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^4.0.0-beta.11",
@@ -66,13 +55,9 @@
     "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.1",
-    "stylelint": "^12.0.0",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^3.1.1",
     "svg-sprite-loader": "^4.1.3",
     "svgo": "^1.3.2",
     "svgo-loader": "^2.2.0",

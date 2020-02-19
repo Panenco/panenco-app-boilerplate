@@ -3,7 +3,7 @@
 ### Usage
 
 ```js
-import { PrimaryButton, SecondaryButton } from '@rmb/ui';
+import { PrimaryButton, SecondaryButton } from '@pma/ui';
 
 render() {
   return (
@@ -14,28 +14,28 @@ render() {
   );
 }
 ```
+
 <!-- STORY -->
 
 ### Properties
 
-* `onClick` - event on click
-* `disabled` - disabled state
-* `children` - button content
-* `type` - type of the button
-* `className` - override button styles
+- `onClick` - event on click
+- `disabled` - disabled state
+- `children` - button content
+- `type` - type of the button
+- `className` - override button styles
 
-| propName | propType | defaultValue | isRequired |
-| -------- | -------- | ------------ | ---------- |
-| onClick  | func     | -            | +          |
-| disabled | bool     | false        | -          |
-| children | node     | -            | +          |
-| type     | string   | button       | -          |
-| className| string   | ''           | -          |
-
+| propName  | propType | defaultValue | isRequired |
+| --------- | -------- | ------------ | ---------- |
+| onClick   | func     | -            | +          |
+| disabled  | bool     | false        | -          |
+| children  | node     | -            | +          |
+| type      | string   | button       | -          |
+| className | string   | ''           | -          |
 
 ### Types
 
-|  type  |  description   |
+| type   | description    |
 | ------ | -------------- |
 | button | default action |
 | reset  | reset form     |
@@ -46,7 +46,7 @@ render() {
 ### Usage
 
 ```js
-import { PrimaryButtonLink, SecondaryButtonLink } from '@rmb/ui';
+import { PrimaryButtonLink, SecondaryButtonLink } from '@pma/ui';
 
 render() {
   return (
@@ -57,18 +57,19 @@ render() {
   );
 }
 ```
+
 <!-- STORY -->
 
 ### Properties
 
-* `to` - path to redirect
-* `disabled` - disabled state
-* `children` - link content
-* `className` - override button styles
+- `to` - path to redirect
+- `disabled` - disabled state
+- `children` - link content
+- `className` - override button styles
 
-| propName | propType | defaultValue | isRequired |
-| -------- | -------- | ------------ | ---------- |
-| to       | string   | -            | +          |
-| disabled | bool     | false        | -          |
-| children | node     | -            | +          |
-| className| string   | ''           | -          |
+| propName  | propType | defaultValue | isRequired |
+| --------- | -------- | ------------ | ---------- |
+| to        | string   | -            | +          |
+| disabled  | bool     | false        | -          |
+| children  | node     | -            | +          |
+| className | string   | ''           | -          |

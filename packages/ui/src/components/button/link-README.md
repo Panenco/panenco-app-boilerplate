@@ -3,7 +3,7 @@
 ### Usage
 
 ```js
-import { PrimaryButtonLink, SecondaryButtonLink } from '@rmb/ui';
+import { PrimaryButtonLink, SecondaryButtonLink } from '@pma/ui';
 
 render() {
   return (
@@ -14,18 +14,19 @@ render() {
   );
 }
 ```
+
 <!-- STORY -->
 
 ### Properties
 
-* `to` - path to redirect
-* `disabled` - disabled state
-* `children` - link content
-* `className` - override button styles
+- `to` - path to redirect
+- `disabled` - disabled state
+- `children` - link content
+- `className` - override button styles
 
-| propName | propType | defaultValue | isRequired |
-| -------- | -------- | ------------ | ---------- |
-| to       | string   | -            | +          |
-| disabled | bool     | false        | -          |
-| children | node     | -            | +          |
-| className| string   | ''           | -          |
+| propName  | propType | defaultValue | isRequired |
+| --------- | -------- | ------------ | ---------- |
+| to        | string   | -            | +          |
+| disabled  | bool     | false        | -          |
+| children  | node     | -            | +          |
+| className | string   | ''           | -          |
