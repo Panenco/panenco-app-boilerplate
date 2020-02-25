@@ -8,14 +8,13 @@
   "scripts": {
     "lerna": "lerna",
     "build": "lerna run build",
-    "clean": "lerna run clean",
     "lint": "lerna run lint:js && lerna run lint:css",
     "start": "yarn server start",
     "bootstrap": "yarn lerna bootstrap",
     "ui": "cd packages/ui && yarn",
     "app": "cd packages/app && yarn",
     "server": "cd packages/server && yarn",
-    "clean:nm": "npm lerna clean --yes && rm -rf node_modules"
+    "clean:nm": "lerna clean --yes && rm -rf node_modules"
   },
   "husky": {
     "hooks": {
