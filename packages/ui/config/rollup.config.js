@@ -1,10 +1,13 @@
 import path from 'path';
+import fs from 'fs';
+import mkdirp from 'mkdirp';
 
-import resolve from 'rollup-plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
-import replace from 'rollup-plugin-replace';
-import json from 'rollup-plugin-json';
+import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
+import svgSprite from 'rollup-plugin-svg-spritesheet';
 
 import autoprefixer from 'autoprefixer';
 import postcss from 'rollup-plugin-postcss';
@@ -13,6 +16,14 @@ import packageJson from '../package.json';
 const paths = require('./paths');
 
 const external = Object.keys(packageJson.peerDependencies);
+
+async function writeFile(filePath, contents) {
+  await mkdirp(path.dirname(filePath));
+
+  fs.writeFile(filePath, contents, () => {
+    console.log(`Svg sprite successfuly created!`);
+  });
+}
 
 export default {
   input: paths.entryPoint,
@@ -36,6 +47,7 @@ export default {
       },
     }),
     commonjs({
+      include: /node_modules/,
       // namedExports: {
       //   'node_modules/react-is/index.js': ['isValidElementType'],
       // },
@@ -56,6 +68,15 @@ export default {
       minimize: true,
       extract: path.join(paths.outputPath, 'styles.css'),
       extensions: ['.css', '.scss'],
+    }),
+    svgSprite({
+      output: code => {
+        // console.log(code);
+        // Do something with the generated code
+        // eg. write to "spritesheet.svg"
+        // fs.writeFile(path.join(paths.outputPath, 'spritesheet.svg'), code);
+        writeFile(path.join(paths.outputPath, 'spritesheet.svg'), code);
+      },
     }),
   ],
   external,

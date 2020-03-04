@@ -5,7 +5,7 @@ module.exports = {
     'react/button-has-type': 0,
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['./stories/**/*.{js,jsx}', './config/**/*.js'] },
+      { devDependencies: ['**/stories/**/*.{js,jsx}', '**/config/**/*.js'] },
     ],
   },
   settings: {
