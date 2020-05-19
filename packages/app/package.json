@@ -37,8 +37,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hot-loader": "^4.12.20",
-    "react-router-dom": "^5.1.2",
+    "react-hot-loader": "^4.12.21",
+    "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.5"
   },
   "devDependencies": {
