@@ -1,0 +1,6 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "projectId": "6wo7qz",
+  "screenshotOnRunFailure": false,
+  "video": false
+}

@@ -10,6 +10,8 @@
     "build": "lerna run build",
     "lint": "lerna run lint:js && lerna run lint:css",
     "start": "yarn server start",
+    "cypress": "cd packages/app && cypress open",
+    "cypress-run": "cd packages/app && cypress run",
     "bootstrap": "yarn lerna bootstrap",
     "ui": "cd packages/ui && yarn",
     "app": "cd packages/app && yarn",
