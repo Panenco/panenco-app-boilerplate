@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@panenco/eslint-config-react"]
+  "extends": ["@panenco/eslint-config-react", "plugin:cypress/recommended"]
 }
